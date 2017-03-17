@@ -1,0 +1,16 @@
+Para gravar áudio utilizaremos o arecord.
+
+Primeiro utilizamos o comando arecord -l e vemos o nosso hardware (usb)
+pi@raspberrypi:~ $ arecord -l
+**** List of CAPTURE Hardware Devices ****
+No protocol specified
+xcb_connection_has_error() returned true
+card 1: CameraVenu [Vimicro USB 2.0 PC Camera (Venu], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+
+No meu caso, card 1 e device 0, então fica assim:
+pi@raspberrypi:~ $ sudo arecord --device=plughw:1,0 -d 10 test1.wav
+
+Com o parametro -d 10, faremos uma gravação de 10 segundos.
