@@ -1,0 +1,14 @@
+Para utilizar Camera usb no raspberry:
+
+sudo apt-get update && sudo apt-get install fswebcam
+
+Para se tirar uma foto:
+fswebcam imagem.jpg
+
+Especificar resolução:
+fswebcam -r 1280x720 image2.jpg
+
+Remover banner:
+fswebcam -r 1280x720 --no-banner image3.jpg
+
+Fonte: https://www.raspberrypi.org/documentation/usage/webcams/
